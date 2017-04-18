@@ -19,7 +19,7 @@ class PokedexViewController: UIViewController, UISearchBarDelegate {
   
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        <#code#>
+        
     }
 
     
