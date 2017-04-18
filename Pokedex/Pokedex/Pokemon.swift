@@ -12,7 +12,7 @@ struct Pokemon {
     
     let name: String
     let id: Int
-    let abilities: String
+    let abilities: [String]
 }
 
 

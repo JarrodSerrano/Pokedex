@@ -21,7 +21,7 @@ class PokemonController {
     
     static func fetchPokemon(for searchTerm: String, completion: @escaping (Pokemon?) -> Void) {
       //appendingPathComponent because the api uses /pokemon/ as the searchItem
-        guard let url = baseURL?.appendingPathComponent(searchTerm) else { completion(nil); return }
+        guard let url = baseURL?.appendingPathComponent(searchTerm.lowercased()) else { completion(nil); return }
         
         NetworkController.performRequest(for: url, httpMethod: .get) {data, error in //body of closure
             //parameters
