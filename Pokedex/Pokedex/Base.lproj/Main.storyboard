@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pokedex View Controller-->
         <scene sceneID="oFu-Vi-FWQ">
             <objects>
-                <viewController id="hG5-MO-iJl" sceneMemberID="viewController">
+                <viewController id="hG5-MO-iJl" customClass="PokedexViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LyX-nl-REb"/>
                         <viewControllerLayoutGuide type="bottom" id="IzN-1X-N13"/>
@@ -57,6 +57,9 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2vn-ul-zX1">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hG5-MO-iJl" id="Ifl-H2-rYn"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,6 +71,11 @@
                             <constraint firstItem="r3D-Xm-Pws" firstAttribute="centerY" secondItem="5Dy-PO-8cU" secondAttribute="centerY" id="z7h-bU-R6e"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="abilitiesLabel" destination="4Zf-Yn-Hlp" id="GnL-B1-Ngd"/>
+                        <outlet property="idLabel" destination="FL7-bc-tQ3" id="kAk-HV-EeD"/>
+                        <outlet property="nameLabel" destination="TDO-GD-iGa" id="UWc-Jg-aoq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PDw-DF-5JH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
